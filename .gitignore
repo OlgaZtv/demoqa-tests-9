@@ -43,4 +43,4 @@ target/
 /gradlew.bat
 
 /shelf/
-/workspace.xml
+/.idea/workspace.xml
