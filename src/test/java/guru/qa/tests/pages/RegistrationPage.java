@@ -1,6 +1,7 @@
 package guru.qa.tests.pages;
 
 import com.codeborne.selenide.SelenideElement;
+import guru.qa.tests.pages.components.CalendarComponent;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -15,6 +16,7 @@ public class RegistrationPage {
             firstNameInput = $("[id=firstName]"),
             lastNameInput = $("[id=lastName]"),
     resultTable = $(".table-responsive");
+    public CalendarComponent calendar = new CalendarComponent();
 
     //actions
     public void openPage() {

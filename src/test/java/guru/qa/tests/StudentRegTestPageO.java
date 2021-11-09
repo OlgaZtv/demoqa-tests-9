@@ -21,10 +21,7 @@ public class StudentRegTestPageO extends TestBase {
         $("[id=userEmail]").setValue("test@test.ru");
         $("[for='gender-radio-2']").click();
         $("#userNumber").setValue("1234567899");
-        $("#dateOfBirthInput").click();
-        $(".react-datepicker__month-select").selectOptionByValue("8");
-        $(".react-datepicker__year-select").selectOptionByValue("1988");
-        $$(".react-datepicker__day").find(text("31")).click();
+        registrationPage.calendar.setDate("31", "August", "1988");
         $("#subjectsInput").sendKeys("Arts");
         $("#subjectsInput").pressEnter();
         $(byText("Reading")).scrollTo().click();
