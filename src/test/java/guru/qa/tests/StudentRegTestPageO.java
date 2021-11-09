@@ -1,33 +1,23 @@
 package guru.qa.tests;
 
 
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
 
 import java.io.File;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class StudentRegTest {
+public class StudentRegTestPageO extends TestBase {
 
-
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.browserSize = "1900x1000";
-    }
 
     @Test
-    public void fillFormTest()  {
-
-        open("https://demoqa.com/automation-practice-form");
-        $("[id=firstName]").setValue("Olga");
-        $("[id=lastName]").setValue("Ztv");
+    public void fillFormTest() {
+        registrationPage.openPage();
+        registrationPage.typeFirstName("Olga")
+                .typeLastName("Ztv");
         $("[id=userEmail]").setValue("test@test.ru");
         $("[for='gender-radio-2']").click();
         $("#userNumber").setValue("1234567899");
@@ -48,16 +38,16 @@ public class StudentRegTest {
         $("[id=submit]").click();
 
         $("#example-modal-sizes-title-lg").should(have(text("Thanks for submitting the form")));
-        $(".table-responsive").$(byText("Student Name")).parent().shouldHave(text("Olga Ztv"));
-        $(".table-responsive").$(byText("Student Email")).parent().shouldHave(text("test@test.ru"));
-        $(".table-responsive").$(byText("Gender")).parent().shouldHave(text("Female"));
-        $(".table-responsive").$(byText("Mobile")).parent().shouldHave(text("1234567899"));
-        $(".table-responsive").$(byText("Date of Birth")).parent().shouldHave(text("31 August,1988"));
-        $(".table-responsive").$(byText("Subjects")).parent().shouldHave(text("Arts"));
-        $(".table-responsive").$(byText("Hobbies")).parent().shouldHave(text("Reading"));
-        $(".table-responsive").$(byText("Picture")).parent().shouldHave(text("lama.jpg"));
-        $(".table-responsive").$(byText("Address")).parent().shouldHave(text("Test test test"));
-        $(".table-responsive").$(byText("State and City")).parent().shouldHave(text("Haryana Karnal"));
+        registrationPage.checkResultsValue("Student Name", "Olga Ztv")
+                .checkResultsValue("Student Email", "test@test.ru")
+                .checkResultsValue("Gender", "Female")
+                .checkResultsValue("Mobile", "1234567899")
+                .checkResultsValue("Date of Birth", "31 August,1988")
+                .checkResultsValue("Subjects", "Arts")
+                .checkResultsValue("Hobbies", "Reading")
+                .checkResultsValue("Picture", "lama.jpg")
+                .checkResultsValue("Address", "Test test test")
+                .checkResultsValue("State and City", "Haryana Karnal");
 
         $("#closeLargeModal").scrollTo().click();
 
