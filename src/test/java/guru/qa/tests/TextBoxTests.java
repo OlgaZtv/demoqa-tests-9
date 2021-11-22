@@ -1,12 +1,12 @@
 package guru.qa.tests;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class TextBoxTests {
 
@@ -16,7 +16,7 @@ public class TextBoxTests {
     }
 
     @Test
-    void fillFormTest(){
+    void fillFormTest() {
         open("https://demoqa.com/text-box");
         $("[id=userName]").setValue("Some name");
         $("#userEmail").setValue("test@test.ru");
@@ -24,14 +24,10 @@ public class TextBoxTests {
         $("#permanentAddress").setValue("Another address");
         $("#submit").click();
 
-        $("#output #name").shouldHave(Condition.text("Some name"));
-        $("#output").$("#email").shouldHave(Condition.text("test@test.ru"));
-        $("#output").$("#currentAddress").shouldHave(Condition.text("Some address"));
-        $("#output").$("#permanentAddress").shouldHave(Condition.text("Another address"));
+        $("#output #name").shouldHave(text("Some name"));
+        $("#output").$("#email").shouldHave(text("test@test.ru"));
+        $("#output").$("#currentAddress").shouldHave(text("Some address"));
+        $("#output").$("#permanentAddress").shouldHave(text("Another address"));
 
-        /*
-        $("#output").shouldHave(text("Some name"), text("aaa@aa.aa"),
-                text("Some address"), text("Another address"));
-*/
     }
 }
