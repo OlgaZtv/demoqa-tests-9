@@ -29,9 +29,5 @@ public class TextBoxTests {
         $("#output").$("#currentAddress").shouldHave(text("Some address"));
         $("#output").$("#permanentAddress").shouldHave(text("Another address"));
 
-
-        //$("#output").shouldHave(text("Some name"), text("aaa@aa.aa"),
-        //text("Some address"), text("Another address"));
-
     }
 }
