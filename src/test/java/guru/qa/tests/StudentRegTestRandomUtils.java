@@ -15,7 +15,7 @@ import static guru.qa.utils.RandomUtils.getRandomString;
 
 
 public class StudentRegTestRandomUtils {
- String firstName = getRandomString(12);
+    String firstName = getRandomString(12);
 
     @BeforeAll
     static void beforeAll() {
@@ -23,7 +23,7 @@ public class StudentRegTestRandomUtils {
     }
 
     @Test
-    public void fillFormTest()  {
+    public void fillFormTest() {
 
         open("https://demoqa.com/automation-practice-form");
         $("[id=firstName]").setValue(firstName);

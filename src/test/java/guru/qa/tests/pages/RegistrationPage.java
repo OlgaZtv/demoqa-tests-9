@@ -16,28 +16,27 @@ import static com.codeborne.selenide.Selenide.open;
 import static java.lang.String.format;
 
 public class RegistrationPage {
+    private final static String RESULTS_TITLE = "Thanks for submitting the form";
     //locators & elements
     private final String FORM_TITLE = "Student Registration Form";
-    private final static String RESULTS_TITLE = "Thanks for submitting the form";
-    private SelenideElement
-            formTitle = $(".practice-form-wrapper"),
-            firstNameInput = $("[id=firstName]"),
-            lastNameInput = $("[id=lastName]"),
-            emailInput = $("[id=userEmail]"),
-            resultTable = $(".table-responsive"),
-            phoneInput = $("#userNumber"),
-            resultTitle = $("#example-modal-sizes-title-lg"),
-            uploadPicture = $("[id=uploadPicture]"),
-            addressInput = $("[id=currentAddress]"),
-            submitButton = $("[id=submit]"),
-            closeModal = $("#closeLargeModal"),
-            modalDialog = $("#modal-dialog");
-
     public CalendarComponent calendar = new CalendarComponent();
     public SubjectComponent subject = new SubjectComponent();
     public StateComponent state = new StateComponent();
     public CityComponent city = new CityComponent();
     File image = new File("C:\\Users\\zatul\\IdeaProjects\\demoqa-tests-9-2\\src\\test\\resources\\lama.jpg");
+    private final SelenideElement
+            formTitle = $(".practice-form-wrapper");
+    private final SelenideElement firstNameInput = $("[id=firstName]");
+    private final SelenideElement lastNameInput = $("[id=lastName]");
+    private final SelenideElement emailInput = $("[id=userEmail]");
+    private final SelenideElement resultTable = $(".table-responsive");
+    private final SelenideElement phoneInput = $("#userNumber");
+    private final SelenideElement resultTitle = $("#example-modal-sizes-title-lg");
+    private final SelenideElement uploadPicture = $("[id=uploadPicture]");
+    private final SelenideElement addressInput = $("[id=currentAddress]");
+    private final SelenideElement submitButton = $("[id=submit]");
+    private final SelenideElement closeModal = $("#closeLargeModal");
+    private final SelenideElement modalDialog = $("#modal-dialog");
 
     //actions
     public void openPage() {

@@ -7,8 +7,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class CityComponent {
 
-    private SelenideElement cityInput = $("#city");
-    public void setCity (){
+    private final SelenideElement cityInput = $("#city");
+
+    public void setCity() {
         cityInput.click();
         cityInput.$(byText("Karnal")).click();
     }

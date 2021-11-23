@@ -16,7 +16,7 @@ import static guru.qa.tests.TestData.email;
 public class StudentRegTestFaker extends TestBase {
     //String firstName = getRandomString(12);
 
-      Faker faker = new Faker(new Locale("ru"));
+    Faker faker = new Faker(new Locale("ru"));
 //    Faker faker = new Faker();
 
     String firstName = faker.name().firstName();
