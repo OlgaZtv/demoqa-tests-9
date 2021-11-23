@@ -16,9 +16,12 @@ import static com.codeborne.selenide.Selenide.open;
 import static java.lang.String.format;
 
 public class RegistrationPage {
-    //locators & elements
-    private final String FORM_TITLE = "Student Registration Form";
     private final static String RESULTS_TITLE = "Thanks for submitting the form";
+    public CalendarComponent calendar = new CalendarComponent();
+    public SubjectComponent subject = new SubjectComponent();
+    public StateComponent state = new StateComponent();
+    public CityComponent city = new CityComponent();
+    File image = new File("resources/lama.jpg");
     private SelenideElement
             formTitle = $(".practice-form-wrapper"),
             firstNameInput = $("[id=firstName]"),
@@ -33,15 +36,11 @@ public class RegistrationPage {
             closeModal = $("#closeLargeModal"),
             modalDialog = $("#modal-dialog");
 
-    public CalendarComponent calendar = new CalendarComponent();
-    public SubjectComponent subject = new SubjectComponent();
-    public StateComponent state = new StateComponent();
-    public CityComponent city = new CityComponent();
-    File image = new File("C:\\Users\\zatul\\IdeaProjects\\demoqa-tests-9-2\\src\\test\\resources\\lama.jpg");
-
     //actions
     public void openPage() {
         open("https://demoqa.com/automation-practice-form");
+        //locators & elements
+        String FORM_TITLE = "Student Registration Form";
         formTitle.shouldHave(text(FORM_TITLE));
     }
 

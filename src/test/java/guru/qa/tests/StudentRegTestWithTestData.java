@@ -14,7 +14,7 @@ import static guru.qa.tests.TestData.email;
 
 
 public class StudentRegTestWithTestData {
- String firstName = "Olga";
+    String firstName = "Olga";
 
     @BeforeAll
     static void beforeAll() {
@@ -22,7 +22,7 @@ public class StudentRegTestWithTestData {
     }
 
     @Test
-    public void fillFormTest()  {
+    public void fillFormTest() {
 
         open("https://demoqa.com/automation-practice-form");
         $("[id=firstName]").setValue(firstName);

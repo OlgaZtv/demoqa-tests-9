@@ -31,7 +31,7 @@ public class StudentRegTestPageObjectHW extends TestBase {
         registrationPage.city.setCity();
         registrationPage.clickSubmit();
         registrationPage.checkResultsTitle();
-        registrationPage.checkResultsValue("Student Name", firstName +" "+ lastName)
+        registrationPage.checkResultsValue("Student Name", firstName + " " + lastName)
                 .checkResultsValue("Student Email", email)
                 .checkResultsValue("Gender", "Female")
                 .checkResultsValue("Mobile", "1234567899")

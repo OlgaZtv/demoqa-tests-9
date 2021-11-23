@@ -6,8 +6,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class SubjectComponent {
     private SelenideElement subjectInput = $("#subjectsInput");
-    public void setSubject (String key){
+
+    public void setSubject(String key) {
         subjectInput.sendKeys(key);
         subjectInput.pressEnter();
     }
-   }
+}

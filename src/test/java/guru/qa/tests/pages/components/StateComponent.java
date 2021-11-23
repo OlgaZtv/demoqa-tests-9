@@ -8,7 +8,8 @@ import static com.codeborne.selenide.Selenide.$;
 public class StateComponent {
 
     private SelenideElement stateInput = $("#state");
-    public void setState (){
+
+    public void setState() {
         stateInput.scrollTo().click();
         stateInput.find(byText("Haryana")).click();
     }

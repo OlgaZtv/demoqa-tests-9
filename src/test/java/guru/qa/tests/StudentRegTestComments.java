@@ -5,12 +5,10 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-
 import java.io.File;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
 
 
@@ -23,7 +21,7 @@ public class StudentRegTestComments {
     }
 
     @Test
-    public void fillFormTest()  {
+    public void fillFormTest() {
 
         open("https://demoqa.com/automation-practice-form");
         $("[id=firstName]").setValue("Olga");
