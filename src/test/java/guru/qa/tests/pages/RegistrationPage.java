@@ -36,7 +36,7 @@ public class RegistrationPage {
     public SubjectComponent subject = new SubjectComponent();
     public StateComponent state = new StateComponent();
     public CityComponent city = new CityComponent();
-    File image = new File("C:\\Users\\zatul\\IdeaProjects\\demoqa-tests-9-2\\src\\test\\resources\\lama.jpg");
+    File image = new File("src/test/resources/lama.jpg");
 
     //actions
     public void openPage() {
