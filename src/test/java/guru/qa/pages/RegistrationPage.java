@@ -1,10 +1,10 @@
-package guru.qa.tests.pages;
+package guru.qa.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import guru.qa.tests.pages.components.CalendarComponent;
-import guru.qa.tests.pages.components.CityComponent;
-import guru.qa.tests.pages.components.StateComponent;
-import guru.qa.tests.pages.components.SubjectComponent;
+import guru.qa.pages.components.CalendarComponent;
+import guru.qa.pages.components.CityComponent;
+import guru.qa.pages.components.StateComponent;
+import guru.qa.pages.components.SubjectComponent;
 
 import java.io.File;
 

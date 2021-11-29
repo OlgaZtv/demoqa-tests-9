@@ -1,4 +1,4 @@
-package guru.qa.tests.pages.components;
+package guru.qa.pages.components;
 
 import com.codeborne.selenide.SelenideElement;
 
