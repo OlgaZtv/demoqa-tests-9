@@ -58,12 +58,12 @@ tasks.withType(Test) {
     }
 }
 
-/*task properties_test(type: Test){
+task properties_test(type: Test){
     systemProperty("browserSize", System.getProperty("browserSize", "400x400"))
     useJUnitPlatform{
         includeTags("properties")
     }
-}*/
+}
 
 /*task many_tags_test(type: Test){
     useJUnitPlatform{
