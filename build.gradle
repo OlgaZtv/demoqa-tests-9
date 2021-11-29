@@ -45,6 +45,8 @@ tasks.withType(JavaCompile) {
 }
 
 tasks.withType(Test) {
+    //systemProperty("environment", System.getProperty("environment", "stage")) //preprod, prod
+    systemProperties(System.getProperties())
     useJUnitPlatform()
 
     testLogging {
@@ -55,4 +57,19 @@ tasks.withType(Test) {
         }
     }
 }
+
+/*task properties_test(type: Test){
+    systemProperty("browserSize", System.getProperty("browserSize", "400x400"))
+    useJUnitPlatform{
+        includeTags("properties")
+    }
+}*/
+
+/*task many_tags_test(type: Test){
+    useJUnitPlatform{
+        includeTags("properties")
+        includeTags("smoke")
+        excludeTags("prod")
+    }
+}*/
 
