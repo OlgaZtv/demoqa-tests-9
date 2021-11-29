@@ -28,6 +28,7 @@ dependencies {
     implementation 'org.glassfish.tyrus.tests.qa:tyrus-tests-qa-lifecycle-test:1.14'
     implementation 'guru.nidi:guru-nidi-parent-pom:1.1.38'
     implementation 'com.composum.pages:composum-pages:1.2.1'
+    implementation "org.aeonbits.owner:owner:1.0.12"
     testImplementation(
             "org.aspectj:aspectjweaver:1.9.7",
             'com.codeborne:selenide:5.21.0',
