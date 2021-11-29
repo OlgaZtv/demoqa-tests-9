@@ -23,7 +23,7 @@ allure {
 dependencies {
     implementation 'com.composum.pages:composum-pages-components:1.2.1'
     implementation 'org.glassfish.tyrus.tests.qa:tyrus-tests-qa-project:1.14'
-      implementation 'com.composum.pages:composum-pages-components-bundle:1.2.1'
+    implementation 'com.composum.pages:composum-pages-components-bundle:1.2.1'
     implementation 'org.glassfish.tyrus.tests.qa:tyrus-tests-qa-browser-test:1.14'
     implementation 'org.glassfish.tyrus.tests.qa:tyrus-tests-qa-lifecycle-test:1.14'
     implementation 'cloud.piranha.pages:piranha-pages-wasp-tests:21.5.0'

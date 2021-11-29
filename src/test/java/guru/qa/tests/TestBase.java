@@ -26,7 +26,6 @@ public class TestBase {
 
         Configuration.browserCapabilities = capabilities;
     }
-
     @AfterEach
     public void tearDown() {
         Attach.screenshotAs("Last screenshot");
@@ -34,4 +33,6 @@ public class TestBase {
         Attach.browserConsoleLogs();
         Attach.addVideo();
     }
-}
+
+
+    }

@@ -19,11 +19,6 @@ public class RegistrationPage {
     private final static String RESULTS_TITLE = "Thanks for submitting the form";
     //locators & elements
     private final String FORM_TITLE = "Student Registration Form";
-    public CalendarComponent calendar = new CalendarComponent();
-    public SubjectComponent subject = new SubjectComponent();
-    public StateComponent state = new StateComponent();
-    public CityComponent city = new CityComponent();
-    File image = new File("C:\\Users\\zatul\\IdeaProjects\\demoqa-tests-9-2\\src\\test\\resources\\lama.jpg");
     private final SelenideElement
             formTitle = $(".practice-form-wrapper");
     private final SelenideElement firstNameInput = $("[id=firstName]");
@@ -37,6 +32,11 @@ public class RegistrationPage {
     private final SelenideElement submitButton = $("[id=submit]");
     private final SelenideElement closeModal = $("#closeLargeModal");
     private final SelenideElement modalDialog = $("#modal-dialog");
+    public CalendarComponent calendar = new CalendarComponent();
+    public SubjectComponent subject = new SubjectComponent();
+    public StateComponent state = new StateComponent();
+    public CityComponent city = new CityComponent();
+    File image = new File("C:\\Users\\zatul\\IdeaProjects\\demoqa-tests-9-2\\src\\test\\resources\\lama.jpg");
 
     //actions
     public void openPage() {
