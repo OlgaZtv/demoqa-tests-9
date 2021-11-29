@@ -36,7 +36,7 @@ public class StudentRegTestComments {
         $("#subjectsInput").sendKeys("Arts");
         $("#subjectsInput").pressEnter();
         $(byText("Reading")).scrollTo().click();
-        File image = new File("E:\\Java\\demoqa-tests-9\\src\\test\\resources\\lama.jpg");
+        File image = new File("src/test/resources/lama.jpg");
         $("[id=uploadPicture]").uploadFile(image);
         $("[id=currentAddress]").setValue("Test test test");
         $("#state").scrollTo().click();
