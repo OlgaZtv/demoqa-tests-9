@@ -56,3 +56,11 @@ tasks.withType(Test) {
         }
     }
 }
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ["C:\\Users\\zatul\\.jdks\\corretto-16.0.2"]
+        }
+    }
+}
