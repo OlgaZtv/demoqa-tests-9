@@ -66,6 +66,14 @@ task properties_test(type: Test){
     }
 }
 
+/*
+task owner_test(type: Test){
+        useJUnitPlatform{
+        includeTags("owner")
+    }
+}
+*/
+
 /*task many_tags_test(type: Test){
     useJUnitPlatform{
         includeTags("properties")
