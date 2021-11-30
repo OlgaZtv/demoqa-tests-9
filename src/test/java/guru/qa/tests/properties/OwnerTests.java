@@ -16,9 +16,11 @@ public class OwnerTests {
     void readCredentialsTest() {
         String login = credentials.login();
         String password = credentials.password();
+        String url = credentials.url();
 
         System.out.println(login);
         System.out.println(password);
+        System.out.println(url);
 
         String message = format("I login as %s with password %s", login, password);
         System.out.println(message);
