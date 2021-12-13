@@ -37,7 +37,7 @@ public class StudentRegTestWithTestData {
         $("#subjectsInput").sendKeys("Arts");
         $("#subjectsInput").pressEnter();
         $(byText("Reading")).scrollTo().click();
-        File image = new File("src/test/resources/lama.jpg");
+        File image = new File("src/test/resources/images/lama.jpg");
         $("[id=uploadPicture]").uploadFile(image);
         $("[id=currentAddress]").setValue("Test test test");
         $("#state").scrollTo().click();
@@ -54,7 +54,7 @@ public class StudentRegTestWithTestData {
         $(".table-responsive").$(byText("Date of Birth")).parent().shouldHave(text("31 August,1988"));
         $(".table-responsive").$(byText("Subjects")).parent().shouldHave(text("Arts"));
         $(".table-responsive").$(byText("Hobbies")).parent().shouldHave(text("Reading"));
-        $(".table-responsive").$(byText("Picture")).parent().shouldHave(text("lama.jpg"));
+        $(".table-responsive").$(byText("Picture")).parent().shouldHave(text("images/lama.jpg"));
         $(".table-responsive").$(byText("Address")).parent().shouldHave(text("Test test test"));
         $(".table-responsive").$(byText("State and City")).parent().shouldHave(text("Haryana Karnal"));
 

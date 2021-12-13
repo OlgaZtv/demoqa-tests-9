@@ -33,26 +33,22 @@ dependencies {
             'com.codeborne:selenide:5.21.0',
             "io.qameta.allure:allure-selenide:2.16.0",
             "com.github.javafaker:javafaker:1.0.2",
-            'org.junit.jupiter:junit-jupiter-api:5.7.2')
+            'org.junit.jupiter:junit-jupiter-api:5.8.2',
+            'org.seleniumhq.selenium:selenium-java:3.141.59',
+            'org.aeonbits.owner:owner:1.0.4',
+            'org.assertj:assertj-core:3.21.0'
+    )
     testRuntimeOnly(
             "org.aspectj:aspectjweaver:1.9.7",
             "org.slf4j:slf4j-simple:1.7.32",
-            "org.junit.jupiter:junit-jupiter-engine:5.7.2")
+            "org.junit.jupiter:junit-jupiter-engine:5.8.2")
 }
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-tasks.withType(Test) {
+test {
     useJUnitPlatform()
-
-    testLogging {
-        lifecycle {
-//            events "started", "failed"
-            events "started", "skipped", "failed", "standard_error", "standard_out"
-            exceptionFormat "short"
-        }
-    }
+    systemProperties(System.getProperties())
 }
-

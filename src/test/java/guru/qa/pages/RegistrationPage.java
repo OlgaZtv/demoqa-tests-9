@@ -5,6 +5,7 @@ import guru.qa.pages.components.CalendarComponent;
 import guru.qa.pages.components.CityComponent;
 import guru.qa.pages.components.StateComponent;
 import guru.qa.pages.components.SubjectComponent;
+import guru.qa.webConfig.WebDriverUtil;
 
 import java.io.File;
 
@@ -36,9 +37,18 @@ public class RegistrationPage {
     public SubjectComponent subject = new SubjectComponent();
     public StateComponent state = new StateComponent();
     public CityComponent city = new CityComponent();
-    File image = new File("src/test/resources/lama.jpg");
+
+    WebDriverUtil webDriver = new WebDriverUtil();
+    File image = new File("src/test/resources/images/lama.jpg");
+
 
     //actions
+    public RegistrationPage openMainPage() {
+        webDriver.openMainPage();
+        formTitle.shouldHave(text(FORM_TITLE));
+        return this;
+    }
+
     public void openPage() {
         open("https://demoqa.com/automation-practice-form");
         formTitle.shouldHave(text(FORM_TITLE));

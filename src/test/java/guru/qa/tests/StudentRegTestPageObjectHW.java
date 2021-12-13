@@ -38,7 +38,7 @@ public class StudentRegTestPageObjectHW extends TestBase {
                 .checkResultsValue("Date of Birth", "31 August,1988")
                 .checkResultsValue("Subjects", "Arts")
                 .checkResultsValue("Hobbies", "Reading")
-                .checkResultsValue("Picture", "lama.jpg")
+                .checkResultsValue("Picture", "images/lama.jpg")
                 .checkResultsValue("Address", streetAddress)
                 .checkResultsValue("State and City", "Haryana Karnal")
                 .closeModal()

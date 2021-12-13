@@ -25,7 +25,7 @@ public class StudentRegTestPageO extends TestBase {
         $("#subjectsInput").sendKeys("Arts");
         $("#subjectsInput").pressEnter();
         $(byText("Reading")).scrollTo().click();
-        File image = new File("src/test/resources/lama.jpg");
+        File image = new File("src/test/resources/images/lama.jpg");
         $("[id=uploadPicture]").uploadFile(image);
         $("[id=currentAddress]").setValue("Test test test");
         $("#state").scrollTo().click();
@@ -42,7 +42,7 @@ public class StudentRegTestPageO extends TestBase {
                 .checkResultsValue("Date of Birth", "31 August,1988")
                 .checkResultsValue("Subjects", "Arts")
                 .checkResultsValue("Hobbies", "Reading")
-                .checkResultsValue("Picture", "lama.jpg")
+                .checkResultsValue("Picture", "images/lama.jpg")
                 .checkResultsValue("Address", "Test test test")
                 .checkResultsValue("State and City", "Haryana Karnal");
 

@@ -55,7 +55,7 @@ public class StudentRegTestFaker extends TestBase {
         $(".table-responsive").$(byText("Date of Birth")).parent().shouldHave(text("31 August,1988"));
         $(".table-responsive").$(byText("Subjects")).parent().shouldHave(text("Arts"));
         $(".table-responsive").$(byText("Hobbies")).parent().shouldHave(text("Reading"));
-        $(".table-responsive").$(byText("Picture")).parent().shouldHave(text("lama.jpg"));
+        $(".table-responsive").$(byText("Picture")).parent().shouldHave(text("images/lama.jpg"));
         $(".table-responsive").$(byText("Address")).parent().shouldHave(text(streetAddress));
         $(".table-responsive").$(byText("State and City")).parent().shouldHave(text("Haryana Karnal"));
 
