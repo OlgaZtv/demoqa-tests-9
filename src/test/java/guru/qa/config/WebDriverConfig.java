@@ -1,19 +1,15 @@
-package guru.qa.webConfig;
+package guru.qa.config;
 
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:config/${environmentBrowser}.properties",
+        "classpath:config/${environmentBrowser}.properties"
 })
-
 public interface WebDriverConfig extends Config {
 
     @Key("browser")
     @DefaultValue("CHROME")
     String browser();
-
-    @Key("remoteDriverUrl")
-    String remoteDriverUrl();
 
     @Key("browserVersion")
     @DefaultValue("96.0")
@@ -22,4 +18,7 @@ public interface WebDriverConfig extends Config {
     @Key("browserSize")
     @DefaultValue("1920x1080")
     String browserSize();
+
+    @Key("remoteDriverUrl")
+    String remoteDriverUrl();
 }

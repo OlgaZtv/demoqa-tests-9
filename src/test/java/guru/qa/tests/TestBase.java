@@ -1,8 +1,8 @@
 package guru.qa.tests;
 
+import guru.qa.config.WebDriverUtil;
 import guru.qa.helpers.Attach;
 import guru.qa.pages.RegistrationPage;
-import guru.qa.webConfig.WebDriverUtil;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 

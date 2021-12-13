@@ -1,5 +1,5 @@
 package guru.qa.tests;
-
+//run this test
 
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +15,7 @@ public class StudentRegTestPageO extends TestBase {
 
     @Test
     public void fillFormTest() {
-        registrationPage.openPage();
+        registrationPage.openMainPage();
         registrationPage.typeFirstName("Olga")
                 .typeLastName("Ztv");
         $("[id=userEmail]").setValue("test@test.ru");

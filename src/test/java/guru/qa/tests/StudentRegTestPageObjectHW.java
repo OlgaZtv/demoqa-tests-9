@@ -16,7 +16,7 @@ public class StudentRegTestPageObjectHW extends TestBase {
 
     @Test
     public void fillFormTest() {
-        registrationPage.openPage();
+        registrationPage.openMainPage();
         registrationPage.typeFirstName(firstName)
                 .typeLastName(lastName)
                 .typeEmail(email)

@@ -1,6 +1,6 @@
 package guru.qa.tests;
 
-import guru.qa.apiConfig.ApiConfig;
+import guru.qa.config.ApiConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.Test;
 

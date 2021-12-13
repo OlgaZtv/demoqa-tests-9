@@ -52,3 +52,4 @@ test {
     useJUnitPlatform()
     systemProperties(System.getProperties())
 }
+//command for cm gradle cleanTest test

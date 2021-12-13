@@ -1,11 +1,11 @@
 package guru.qa.pages;
 
 import com.codeborne.selenide.SelenideElement;
+import guru.qa.config.WebDriverUtil;
 import guru.qa.pages.components.CalendarComponent;
 import guru.qa.pages.components.CityComponent;
 import guru.qa.pages.components.StateComponent;
 import guru.qa.pages.components.SubjectComponent;
-import guru.qa.webConfig.WebDriverUtil;
 
 import java.io.File;
 
@@ -13,7 +13,6 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
 import static java.lang.String.format;
 
 public class RegistrationPage {
@@ -47,11 +46,6 @@ public class RegistrationPage {
         webDriver.openMainPage();
         formTitle.shouldHave(text(FORM_TITLE));
         return this;
-    }
-
-    public void openPage() {
-        open("https://demoqa.com/automation-practice-form");
-        formTitle.shouldHave(text(FORM_TITLE));
     }
 
     public RegistrationPage typeFirstName(String value) {
